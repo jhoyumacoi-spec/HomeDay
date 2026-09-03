@@ -194,13 +194,15 @@ HERO
 }
 
 .hero h1 {
-  font-family: 'Lora', serif !important;
+  font-family: 'Poppins', sans-serif;
   font-style: italic;
   font-size: clamp(42px, 6vw, 72px);
   line-height: 1.1;
-  font-weight: 500;
+  font-weight: 600;
   color: #333333;
   margin-bottom: 25px;
+  transform: skewX(-3deg);
+  transform-origin: left;
 }
 
 .hero p:not(.pequeno-titulo) {
