@@ -14,7 +14,7 @@ const productos = [
         categoria: "Cobijas",
         precio: 50000,
         descripcion: "Cobija suave y cómoda para descansar.",
-        imagen: "Cobija.png"
+        Imagen: "cobija sencilla.png"
     },
 
     {
@@ -23,7 +23,7 @@ const productos = [
         categoria: "Cobijas",
         precio: 70000,
         descripcion: "Cobija de mayor tamaño y excelente calidad.",
-        imagen: "cobija doble.png"
+        Imagen: "cobija doble.png"
     },
 
     {
@@ -32,7 +32,7 @@ const productos = [
         categoria: "Cobertores",
         precio: 50000,
         descripcion: "Cobertor ideal para darle mayor comodidad a tu cama.",
-        imagen: "Covertor.png"
+        Imagen: "covertor.png"
     },
 
     {
@@ -41,7 +41,7 @@ const productos = [
         categoria: "Ruanas",
         precio: 38000,
         descripcion: "Ruana cómoda y abrigadora para días fríos.",
-        imagen: "Ruana niño.jpeg"
+        Imagen: "ruana niño.jpeg"
     },
     
     {
@@ -59,7 +59,7 @@ const productos = [
         categoria: "Buzos",
         precio: 35000,
         descripcion: "Buzo cómodo para utilizar todos los días.",
-        imagen: "Buzo osito.jpeg"
+        Imagen: "buzo osito.jpeg"
     }
 
 ];
