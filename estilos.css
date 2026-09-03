@@ -24,8 +24,8 @@ HEADER
 
 .header {
   width: 100%;
-  height: 80px;
-  background: #FFFFFF;
+  height: 82px;
+  background: rgba(255, 255, 255, 0.96);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,14 +33,21 @@ HEADER
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: #333333;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
 }
 
 .logo span {
@@ -49,37 +56,57 @@ HEADER
 
 .menu {
   display: flex;
-  gap: 35px;
+  align-items: center;
+  gap: 38px;
 }
 
 .menu a {
+  position: relative;
   text-decoration: none;
   color: #333333;
   font-size: 14px;
   font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.3s ease;
+  padding: 8px 0;
 }
 
 .menu a:hover {
   color: #7A8B63;
 }
 
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #7A8B63;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
 .boton-carrito {
   border: none;
   background: #333333;
   color: white;
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   cursor: pointer;
   font-size: 18px;
   position: relative;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .boton-carrito:hover {
-  transform: scale(1.08);
+  transform: translateY(-2px) scale(1.05);
   background: #7A8B63;
+  box-shadow: 0 8px 20px rgba(122, 139, 99, 0.25);
 }
 
 #contador-carrito {
@@ -102,60 +129,54 @@ HERO
 ========================================= */
 
 .hero {
-
-  min-height: 570px;
-
+  min-height: 620px;
   background: linear-gradient(
-    90deg,
+    135deg,
     #E6D8C7 0%,
-    #F4EFE7 55%,
+    #F4EFE7 50%,
     #FAF7F2 100%
   );
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
-  gap: 40px;
-
-  padding: 50px 7%;
-
+  gap: 60px;
+  padding: 70px 7%;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-contenido {
-  max-width: 620px;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-imagen {
-
   width: 50%;
-
-  height: 450px;
-
+  height: 470px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+  transition: transform 0.4s ease;
+}
 
-  border-radius: 15px;
-
+.hero-imagen:hover {
+  transform: scale(1.02);
 }
 
 .hero-imagen img {
-
   width: 100%;
-
   height: 100%;
-
   object-fit: contain;
-
   display: block;
+  transition: transform 0.5s ease;
+}
 
+.hero-imagen:hover img {
+  transform: scale(1.04);
 }
 
 .pequeno-titulo {
@@ -167,10 +188,11 @@ HERO
 }
 
 .hero h1 {
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.1;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1.05;
   font-weight: 600;
   color: #333333;
+  letter-spacing: -1.5px;
   margin-bottom: 25px;
 }
 
@@ -185,16 +207,20 @@ HERO
   display: inline-block;
   background: #333333;
   color: white;
-  padding: 15px 30px;
-  border-radius: 5px;
+  padding: 16px 32px;
+  border-radius: 30px;
   text-decoration: none;
   font-size: 14px;
-  transition: 0.3s;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .boton-principal:hover {
   background: #7A8B63;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(122, 139, 99, 0.25);
 }
 
 /* =========================================
