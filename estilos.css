@@ -410,19 +410,28 @@ margin-bottom: 15px;
 }
 
 .boton-agregar {
-width: 100%;
-border: none;
-background: #333;
-color: white;
-padding: 12px;
-border-radius: 5px;
-cursor: pointer;
-font-family: inherit;
-transition: 0.3s;
+  width: 100%;
+  border: none;
+  background: #333333;
+  color: #FFFFFF;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .boton-agregar:hover {
-background: #9b7653;
+  background: #7A8B63;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.boton-agregar:active {
+  transform: translateY(0);
 }
 
 /* =========================================
