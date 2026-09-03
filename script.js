@@ -438,11 +438,11 @@ function enviarPedidoWhatsApp() {
 
     let mensaje = " *NUEVO PEDIDO - HOME DAY*\n\n";
 
-    mensaje += " *Cliente:* " + nombre + "\n";
-    mensaje += " *Dirección:* " + direccion + "\n";
-    mensaje += " *Ciudad:* " + ciudad + "\n\n";
+    mensaje += "*Cliente:* " + nombre + "\n";
+    mensaje += "*Dirección:* " + direccion + "\n";
+    mensaje += "*Ciudad:* " + ciudad + "\n\n";
 
-    mensaje += " *PRODUCTOS:*\n";
+    mensaje += "*PRODUCTOS:*\n";
 
     let total = 0;
 
@@ -463,7 +463,7 @@ function enviarPedidoWhatsApp() {
 
     });
 
-    mensaje += "\n *TOTAL:* " + formatearPrecio(total);
+    mensaje += "\n*TOTAL:* " + formatearPrecio(total);
 
     const numeroWhatsApp = "573042368566";
 
