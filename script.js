@@ -23,7 +23,7 @@ const productos = [
         categoria: "Cobijas",
         precio: 70000,
         descripcion: "Cobija de mayor tamaño y excelente calidad.",
-        imagen: "Cobija doble.png"
+        imagen: "cobija doble.png"
     },
 
     {
