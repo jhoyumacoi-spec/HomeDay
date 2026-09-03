@@ -452,7 +452,7 @@ if (!nombre || !direccion || !ciudad) {
 }
 
 
-let mensaje = "🛍️ *NUEVO PEDIDO - HOME DAY*%0A%0A";
+let mensaje = "🛍️ *NUEVO PEDIDO - HOME DAY*\n\n";
 
 mensaje += "👤 *Cliente:* " + nombre + "%0A";
 
