@@ -422,86 +422,58 @@ PEDIDO POR WHATSAPP
 
 function enviarPedidoWhatsApp() {
 
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+    }
 
-if (carrito.length === 0) {
+    const nombre = document.getElementById("nombre-cliente").value.trim();
+    const direccion = document.getElementById("direccion-cliente").value.trim();
+    const ciudad = document.getElementById("ciudad-cliente").value.trim();
 
-    alert("Tu carrito está vacío.");
+    if (!nombre || !direccion || !ciudad) {
+        alert("Por favor completa tu nombre, dirección y ciudad.");
+        return;
+    }
 
-    return;
+    let mensaje = "🛍️ *NUEVO PEDIDO - HOME DAY*\n\n";
 
-}
+    mensaje += "👤 *Cliente:* " + nombre + "\n";
+    mensaje += "📍 *Dirección:* " + direccion + "\n";
+    mensaje += "🏙️ *Ciudad:* " + ciudad + "\n\n";
 
-const nombre =
-    document.getElementById("nombre-cliente").value.trim();
+    mensaje += "🛒 *PRODUCTOS:*\n";
 
-const direccion =
-    document.getElementById("direccion-cliente").value.trim();
+    let total = 0;
 
-const ciudad =
-    document.getElementById("ciudad-cliente").value.trim();
+    carrito.forEach(producto => {
 
+        const subtotal = producto.precio * producto.cantidad;
 
-if (!nombre || !direccion || !ciudad) {
+        total += subtotal;
 
-    alert(
-        "Por favor completa tu nombre, dirección y ciudad."
-    );
+        mensaje +=
+            "• " +
+            producto.nombre +
+            " x" +
+            producto.cantidad +
+            " - " +
+            formatearPrecio(subtotal) +
+            "\n";
 
-    return;
+    });
 
-}
+    mensaje += "\n💰 *TOTAL:* " + formatearPrecio(total);
 
+    const numeroWhatsApp = "573042368566";
 
-let mensaje = "🛍️ *NUEVO PEDIDO - HOME DAY*\n\n";
+    const url =
+        "https://wa.me/" +
+        numeroWhatsApp +
+        "?text=" +
+        encodeURIComponent(mensaje);
 
-mensaje += "👤 *Cliente:* " + nombre + "%0A";
-
-mensaje += "📍 *Dirección:* " + direccion + "%0A";
-
-mensaje += "🏙️ *Ciudad:* " + ciudad + "%0A%0A";
-
-mensaje += "🛒 *PRODUCTOS:*%0A";
-
-
-let total = 0;
-
-
-carrito.forEach(producto => {
-
-    const subtotal =
-        producto.precio * producto.cantidad;
-
-    total += subtotal;
-
-    mensaje +=
-        "• " +
-        producto.nombre +
-        " x" +
-        producto.cantidad +
-        " - " +
-        formatearPrecio(subtotal) +
-        "%0A";
-
-});
-
-
-mensaje += "%0A💰 *TOTAL: " +
-    formatearPrecio(total);
-
-
-const numeroWhatsApp = "573042368566";
-
-
-const url =
-    "https://wa.me/" +
-    numeroWhatsApp +
-    "?text=" +
-    mensaje;
-
-
-window.open(url, "_blank");
-
-
+    window.open(url, "_blank");
 }
 
 /* =========================================
