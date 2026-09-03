@@ -358,7 +358,7 @@ gap: 25px;
 }
 
 .producto-imagen {
-    height: 250px;
+    height: 280px;
     background: #eee7df;
     display: flex;
     align-items: center;
@@ -372,6 +372,11 @@ gap: 25px;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.producto:hover .producto-imagen img {
+    transform: scale(1.05);
 }
 
 .producto-info {
