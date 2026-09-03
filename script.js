@@ -43,7 +43,7 @@ const productos = [
         descripcion: "Ruana cómoda y abrigadora para días fríos.",
         imagen: "Ruana niño.jpeg"
     },
-
+    
     {
         id: 5,
         nombre: "Ruana Adulto",
