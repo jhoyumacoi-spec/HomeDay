@@ -228,7 +228,7 @@ CATEGORÍAS
 ========================================= */
 
 .categorias {
-  padding: 65px 7% 45px;
+  padding: 65px 7% 35px;
   background: #F4EFE7;
   text-align: center;
 }
@@ -237,6 +237,15 @@ CATEGORÍAS
   font-size: 30px;
   margin-bottom: 40px;
   color: #333333;
+}
+
+.categorias-contenedor {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
 .categorias-contenedor button {
@@ -289,7 +298,7 @@ PRODUCTOS
 ========================================= */
 
 .productos {
-  padding: 55px 7% 80px;
+  padding: 40px 7% 80px;
 }
 
 .titulo-productos {
