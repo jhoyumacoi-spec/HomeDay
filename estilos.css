@@ -187,10 +187,11 @@ HERO
 
 .pequeno-titulo {
   color: #7A8B63;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -448,8 +449,8 @@ NOSOTROS
 ========================================= */
 
 .nosotros {
-padding: 100px 10%;
-background: #eee7df;
+  padding: 90px 7%;
+  background: #eee7df;
 }
 
 .nosotros-contenido {
@@ -457,14 +458,19 @@ max-width: 750px;
 }
 
 .nosotros h2 {
-font-size: 40px;
-margin-bottom: 25px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
 }
 
 .nosotros p:not(.pequeno-titulo) {
-color: #666;
-line-height: 1.8;
-margin-bottom: 15px;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  max-width: 700px;
 }
 
 /* =========================================
