@@ -1,0 +1,759 @@
+/* =========================================
+HOME DAY - ESTILOS
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F4EFE7;
+  color: #333333;
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.header {
+  width: 100%;
+  height: 80px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #333333;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.menu {
+  display: flex;
+  gap: 35px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #7A8B63;
+}
+
+.boton-carrito {
+  border: none;
+  background: #333333;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.boton-carrito:hover {
+  transform: scale(1.08);
+  background: #7A8B63;
+}
+
+#contador-carrito {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #7A8B63;
+  color: white;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero {
+
+  min-height: 570px;
+
+  background: linear-gradient(
+    90deg,
+    #E6D8C7 0%,
+    #F4EFE7 55%,
+    #FAF7F2 100%
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 50px 7%;
+
+}
+
+.hero-contenido {
+  max-width: 620px;
+}
+
+.hero-imagen {
+
+  width: 50%;
+
+  height: 450px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+}
+
+.hero-imagen img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+}
+
+.pequeno-titulo {
+  color: #7A8B63;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.1;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+.hero p:not(.pequeno-titulo) {
+  max-width: 520px;
+  line-height: 1.8;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.boton-principal {
+  display: inline-block;
+  background: #333333;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.boton-principal:hover {
+  background: #7A8B63;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+CATEGORÍAS
+========================================= */
+
+.categorias {
+  padding: 70px 7%;
+  background: #F4EFE7;
+  text-align: center;
+}
+
+.categorias h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #333333;
+}
+
+.categorias-contenedor {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.categorias-contenedor button {
+  border: 1px solid #E6D8C7;
+  background: #FFFFFF;
+  padding: 30px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  color: #333333;
+  transition: 0.3s;
+}
+
+.categorias-contenedor button:hover {
+  background: #7A8B63;
+  color: #FFFFFF;
+  transform: translateY(-5px);
+}
+
+.categorias-contenedor button:first-line {
+  font-size: 30px;
+}
+
+.categorias-contenedor span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* =========================================
+PRODUCTOS
+========================================= */
+
+.productos {
+padding: 80px 7%;
+}
+
+.titulo-productos {
+display: flex;
+justify-content: space-between;
+align-items: end;
+margin-bottom: 40px;
+}
+
+.titulo-productos h2 {
+font-size: 35px;
+font-weight: 600;
+}
+
+.buscador {
+background: white;
+border: 1px solid #ddd;
+border-radius: 30px;
+padding: 5px 18px;
+display: flex;
+align-items: center;
+width: 300px;
+}
+
+.buscador input {
+border: none;
+outline: none;
+width: 100%;
+padding: 10px;
+font-family: inherit;
+background: transparent;
+}
+
+/* =========================================
+LISTA DE PRODUCTOS
+========================================= */
+
+.lista-productos {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.producto {
+background: white;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+transition: 0.3s;
+}
+
+.producto:hover {
+transform: translateY(-7px);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.producto-imagen {
+    height: 250px;
+    background: #eee7df;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-info {
+padding: 20px;
+}
+
+.producto-categoria {
+font-size: 11px;
+color: #9b7653;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.producto h3 {
+font-size: 18px;
+margin: 8px 0;
+}
+
+.producto-descripcion {
+color: #777;
+font-size: 13px;
+line-height: 1.6;
+margin-bottom: 15px;
+}
+
+.producto-precio {
+font-size: 19px;
+font-weight: 700;
+margin-bottom: 15px;
+}
+
+.boton-agregar {
+width: 100%;
+border: none;
+background: #333;
+color: white;
+padding: 12px;
+border-radius: 5px;
+cursor: pointer;
+font-family: inherit;
+transition: 0.3s;
+}
+
+.boton-agregar:hover {
+background: #9b7653;
+}
+
+/* =========================================
+NOSOTROS
+========================================= */
+
+.nosotros {
+padding: 100px 10%;
+background: #eee7df;
+}
+
+.nosotros-contenido {
+max-width: 750px;
+}
+
+.nosotros h2 {
+font-size: 40px;
+margin-bottom: 25px;
+}
+
+.nosotros p:not(.pequeno-titulo) {
+color: #666;
+line-height: 1.8;
+margin-bottom: 15px;
+}
+
+/* =========================================
+CONTACTO
+========================================= */
+
+.contacto {
+    padding: 100px 20px;
+    text-align: center;
+    background: #7A8B63;
+}
+
+.contacto h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.contacto p:not(.pequeno-titulo) {
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.boton-whatsapp {
+display: inline-block;
+background: #25d366;
+color: white;
+padding: 15px 30px;
+text-decoration: none;
+border-radius: 6px;
+font-weight: 500;
+transition: 0.3s;
+}
+
+.boton-whatsapp:hover {
+transform: translateY(-3px);
+}
+
+/* =========================================
+CARRITO
+========================================= */
+
+.fondo-carrito {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2000;
+    display: none;
+    justify-content: flex-end;
+}
+
+.fondo-carrito.activo {
+    display: flex;
+}
+
+.carrito {
+    width: 450px;
+    max-width: 100%;
+    height: 100%;
+    background: white;
+    padding: 25px;
+    overflow-y: auto;
+    animation: aparecerCarrito 0.3s ease;
+}
+
+.carrito-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid #eee;
+padding-bottom: 20px;
+}
+
+.carrito-header h2 {
+font-size: 22px;
+}
+
+.carrito-header button {
+border: none;
+background: transparent;
+font-size: 22px;
+cursor: pointer;
+}
+
+/* =========================================
+PRODUCTOS DEL CARRITO
+========================================= */
+
+.producto-carrito {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+padding: 18px 0;
+border-bottom: 1px solid #eee;
+}
+
+.producto-carrito-info {
+flex: 1;
+}
+
+.producto-carrito-info h4 {
+font-size: 14px;
+margin-bottom: 5px;
+}
+
+.producto-carrito-info p {
+color: #777;
+font-size: 13px;
+}
+
+.controles-cantidad {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.controles-cantidad button {
+width: 27px;
+height: 27px;
+border: 1px solid #ddd;
+background: #fafafa;
+cursor: pointer;
+border-radius: 4px;
+}
+
+.eliminar-producto {
+border: none !important;
+background: transparent !important;
+color: #b85c5c;
+font-size: 18px;
+}
+
+.carrito-vacio {
+text-align: center;
+padding: 50px 0;
+color: #888;
+}
+
+/* =========================================
+TOTAL
+========================================= */
+
+.carrito-total {
+display: flex;
+justify-content: space-between;
+padding: 25px 0;
+font-size: 20px;
+border-bottom: 1px solid #eee;
+}
+
+/* =========================================
+DATOS CLIENTE
+========================================= */
+
+.datos-cliente {
+padding-top: 25px;
+}
+
+.datos-cliente h3 {
+font-size: 17px;
+margin-bottom: 15px;
+}
+
+.datos-cliente input {
+width: 100%;
+padding: 13px;
+border: 1px solid #ddd;
+border-radius: 5px;
+margin-bottom: 12px;
+outline: none;
+font-family: inherit;
+}
+
+.datos-cliente input:focus {
+border-color: #9b7653;
+}
+
+/* =========================================
+BOTÓN PEDIDO
+========================================= */
+
+.boton-pedido {
+width: 100%;
+margin-top: 15px;
+padding: 15px;
+border: none;
+background: #25d366;
+color: white;
+border-radius: 5px;
+font-family: inherit;
+font-weight: 600;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.boton-pedido:hover {
+background: #1ebc59;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer {
+background: #292929;
+color: white;
+text-align: center;
+padding: 50px 20px 25px;
+}
+
+.footer-logo {
+font-size: 25px;
+font-weight: 700;
+letter-spacing: 3px;
+margin-bottom: 10px;
+}
+
+footer p {
+color: #bbb;
+margin-bottom: 8px;
+font-size: 14px;
+}
+
+.copyright {
+border-top: 1px solid #444;
+margin-top: 30px;
+padding-top: 20px;
+color: #888;
+font-size: 12px;
+}
+
+/* =========================================
+MENSAJE SIN PRODUCTOS
+========================================= */
+
+.sin-productos {
+grid-column: 1 / -1;
+text-align: center;
+padding: 50px;
+color: #777;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+
+.lista-productos {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.categorias-contenedor {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+}
+
+@media (max-width: 700px) {
+
+
+.header {
+    padding: 0 5%;
+}
+
+.menu {
+    display: none;
+}
+
+.hero {
+    padding: 60px 7%;
+    min-height: 500px;
+}
+
+.hero h1 {
+    font-size: 45px;
+}
+
+.titulo-productos {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.buscador {
+    width: 100%;
+}
+
+.lista-productos {
+    grid-template-columns: 1fr;
+}
+
+.categorias-contenedor {
+    grid-template-columns: 1fr 1fr;
+}
+
+.productos {
+    padding: 60px 5%;
+}
+
+.nosotros {
+    padding: 70px 7%;
+}
+
+.nosotros h2 {
+    font-size: 32px;
+}
+
+.contacto h2 {
+    font-size: 30px;
+}
+
+
+}
+
+@media (max-width: 450px) {
+
+
+.categorias-contenedor {
+    grid-template-columns: 1fr;
+}
+
+.carrito {
+    padding: 20px;
+}
+
+
+}
+
+/* =========================================
+   REDES SOCIALES
+========================================= */
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.1);
+}
+
+.redes-sociales svg {
+    width: 32px;
+    height: 32px;
+}

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Day | Tienda Online</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span>HOME</span> DAY
+        </div>
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="boton-carrito" onclick="abrirCarrito()">
+            🛒
+            <span id="contador-carrito">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         INICIO
+    ========================== -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-contenido">
+
+        <p class="pequeno-titulo">
+            BIENVENIDO A HOME DAY
+        </p>
+
+        <h1>
+            Comodidad para<br>
+            todos los días
+        </h1>
+
+        <p>
+            Encuentra cobijas, cobertores, ruanas y buzos
+            para disfrutar de mayor comodidad y abrigo.
+        </p>
+
+        <a href="#productos" class="boton-principal">
+            Ver productos
+        </a>
+
+    </div>
+
+    <div class="hero-imagen">
+        <img src="./imagenes/cama.png" alt="Cama acogedora Home Day">
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         CATEGORÍAS
+    ========================== -->
+
+    <section class="categorias">
+
+        <h2>Compra por categoría</h2>
+
+        <div class="categorias-contenedor">
+
+            <button onclick="filtrarCategoria('Cobijas')">
+                🛏️
+                <span>Cobijas</span>
+            </button>
+
+            <button onclick="filtrarCategoria('Cobertores')">
+                🧶
+                <span>Cobertores</span>
+            </button>
+
+            <button onclick="filtrarCategoria('Ruanas')">
+                🧣
+                <span>Ruanas</span>
+            </button>
+
+            <button onclick="filtrarCategoria('Buzos')">
+                🧥
+                <span>Buzos</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTOS
+    ========================== -->
+
+    <section id="productos" class="productos">
+
+        <div class="titulo-productos">
+
+            <div>
+                <p class="pequeno-titulo">
+                    NUESTRO CATÁLOGO
+                </p>
+
+                <h2>
+                    Productos destacados
+                </h2>
+            </div>
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar producto..."
+                    onkeyup="buscarProducto()"
+                >
+
+                🔎
+
+            </div>
+
+        </div>
+
+
+        <!-- Aquí aparecerán los productos -->
+
+        <div id="lista-productos" class="lista-productos"></div>
+
+    </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================== -->
+
+    <section id="nosotros" class="nosotros">
+
+        <div class="nosotros-contenido">
+
+            <p class="pequeno-titulo">
+                SOBRE NOSOTROS
+            </p>
+
+            <h2>
+                Bienvenido a Home Day
+            </h2>
+
+            <p>
+                En Home Day buscamos ofrecer productos cómodos,
+                prácticos y de calidad para acompañarte todos los días.
+            </p>
+
+            <p>
+                Contamos con una selección de cobijas, cobertores,
+                ruanas y buzos pensados para brindarte comodidad
+                y abrigo.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section id="contacto" class="contacto">
+
+        <p class="pequeno-titulo">
+            CONTÁCTANOS
+        </p>
+
+        <h2>
+            ¿Tienes alguna pregunta?
+        </h2>
+
+        <p>
+            Escríbenos directamente por WhatsApp.
+        </p>
+
+        <a
+            href="https://wa.me/573042368566"
+            target="_blank"
+            class="boton-whatsapp"
+        >
+            📱 Hablar por WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         CARRITO
+    ========================== -->
+
+    <div id="fondo-carrito" class="fondo-carrito">
+
+        <div class="carrito">
+
+            <div class="carrito-header">
+
+                <h2>
+                    🛒 Mi carrito
+                </h2>
+
+                <button onclick="cerrarCarrito()">
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div id="productos-carrito" class="productos-carrito">
+
+                <p class="carrito-vacio">
+                    Tu carrito está vacío.
+                </p>
+
+            </div>
+
+
+            <div class="carrito-total">
+
+                <span>
+                    Total:
+                </span>
+
+                <strong id="total-carrito">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <!-- DATOS DEL CLIENTE -->
+
+            <div class="datos-cliente">
+
+                <h3>
+                    Datos para el pedido
+                </h3>
+
+                <input
+                    type="text"
+                    id="nombre-cliente"
+                    placeholder="Nombre completo"
+                >
+
+                <input
+                    type="text"
+                    id="direccion-cliente"
+                    placeholder="Dirección de entrega"
+                >
+
+                <input
+                    type="text"
+                    id="ciudad-cliente"
+                    placeholder="Ciudad"
+                >
+
+            </div>
+
+
+            <!-- BOTÓN WHATSAPP -->
+
+            <button
+                class="boton-pedido"
+                onclick="enviarPedidoWhatsApp()"
+            >
+                📲 Realizar pedido por WhatsApp
+            </button>
+
+        </div>
+
+    </div>
+
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        HOME DAY
+    </div>
+
+    <p>
+        Comodidad para todos los días.
+    </p>
+
+    <p>
+        WhatsApp: 304 236 8566
+    </p>
+
+    <!-- REDES SOCIALES -->
+
+    <div class="redes-sociales">
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/home_day17"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            title="Síguenos en Instagram"
+        >
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                <defs>
+                    <linearGradient
+                        id="instagram-gradient"
+                        x1="0"
+                        y1="1"
+                        x2="1"
+                        y2="0"
+                    >
+                        <stop offset="0%" stop-color="#f9ce34"/>
+                        <stop offset="35%" stop-color="#ee2a7b"/>
+                        <stop offset="70%" stop-color="#6228d7"/>
+                        <stop offset="100%" stop-color="#4f5bd5"/>
+                    </linearGradient>
+                </defs>
+
+                <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    ry="5"
+                    fill="none"
+                    stroke="url(#instagram-gradient)"
+                    stroke-width="2"
+                />
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    fill="none"
+                    stroke="url(#instagram-gradient)"
+                    stroke-width="2"
+                />
+
+                <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1.2"
+                    fill="#ee2a7b"
+                />
+
+            </svg>
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+            href="https://www.tiktok.com/@home.day17"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            title="Síguenos en TikTok"
+        >
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                <!-- Sombra turquesa -->
+
+                <path
+                    d="M15 3v10.5a3.5 3.5 0 1 1-3-3.46"
+                    fill="none"
+                    stroke="#25F4EE"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+
+                <!-- Sombra rosa -->
+
+                <path
+                    d="M16.5 4.5v10.5a3.5 3.5 0 1 1-3-3.46"
+                    fill="none"
+                    stroke="#FE2C55"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+
+                <!-- Símbolo principal -->
+
+                <path
+                    d="M15 3v10.5a3.5 3.5 0 1 1-3-3.46M15 3c.3 2.2 1.6 3.6 4 3.8v3.1c-1.5.1-2.8-.3-4-1"
+                    fill="none"
+                    stroke="#111111"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+
+            </svg>
+
+        </a>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Home Day. Todos los derechos reservados.
+    </div>
+
+</footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
