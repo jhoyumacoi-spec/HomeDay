@@ -242,13 +242,14 @@ CATEGORÍAS
 .categorias-contenedor {
   width: 100%;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .categorias-contenedor button {
+  width: 100%;
   border: 1px solid #E6D8C7;
   background: #FFFFFF;
   padding: 35px 20px;
