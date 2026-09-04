@@ -402,8 +402,9 @@ letter-spacing: 1px;
 }
 
 .producto h3 {
-font-size: 18px;
-margin: 8px 0;
+  font-size: 18px;
+  margin: 8px 0;
+  color: #FFFFFF;
 }
 
 .producto-descripcion {
