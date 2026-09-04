@@ -394,11 +394,11 @@ padding: 20px;
 }
 
 .producto-categoria {
-font-size: 11px;
-color: #9b7653;
-font-weight: 600;
-text-transform: uppercase;
-letter-spacing: 1px;
+  font-size: 11px;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .producto h3 {
