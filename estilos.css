@@ -354,12 +354,12 @@ gap: 25px;
 }
 
 .producto {
-  background: #FFFFFF;
+  background: #7A8B63;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.10);
   transition: all 0.35s ease;
-  border: 1px solid #EDE6DC;
+  border: 1px solid #7A8B63;
 }
 
 .producto:hover {
