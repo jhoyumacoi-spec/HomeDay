@@ -408,16 +408,17 @@ letter-spacing: 1px;
 }
 
 .producto-descripcion {
-color: #777;
-font-size: 13px;
-line-height: 1.6;
-margin-bottom: 15px;
+  color: #F4EFE7;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .producto-precio {
-font-size: 19px;
-font-weight: 700;
-margin-bottom: 15px;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #FFFFFF;
 }
 
 .boton-agregar {
